@@ -1,0 +1,49 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* -------------------------- ANIMAÇÕES ---------------------------  */
+
+@keyframes slideLeft {
+  to {
+    left: 0; /* move para a posição superior 0 (dentro do contêiner) */
+  }
+}
+
+@keyframes sliderBlur {
+  to {
+    filter: blur(0); /* move para a posição superior 0 (dentro do contêiner) */
+  }
+}
+
+@keyframes downUp {
+  0% {
+    transform: translateY(
+      0
+    ); /* move para a posição superior 0 (dentro do contêiner) */
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+.slider-left {
+  opacity: 0;
+  filter: blur(15px);
+  transition: all 1s;
+  transform: translateX(-20px);
+}
+
+.slider-right {
+  opacity: 0;
+  filter: blur(15px);
+  transition: all 1s;
+  transform: translateX(-20px);
+}
+
+.show {
+  opacity: 1;
+  transition: all 2s;
+  filter: blur(0);
+  transform: translateX(0);
+}
